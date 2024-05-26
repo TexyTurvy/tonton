@@ -51,7 +51,7 @@ function (context, args){ // t:#s.aon.public
 					o[m2[1]] = m2[2];
 					o['project'] = m4[1];
 					r2 = t.call(o);
-					//pm = pm + m4[1] + " `1Res`: " +(typeof r2)+ "\n"
+					pm = pm + m4[1] + "\n"// + " `1Res`: " +(typeof r2)+ "\n"
 					for(var fs in r2)
 					{
 						var m5 = r2[fs].match(/^([\w]+\.[\w]+)$/);
@@ -64,11 +64,11 @@ function (context, args){ // t:#s.aon.public
 			}
 			if(!um){ return {ok:false, msg:"Interference blocks your way, try again"}}
 			else{
-			//const [payToken, message] = #fs.wiz.spellbound({ action: "prepare", owner:"tonton", cost:1 }) // I decided that a scraper tool wasn't useful enough to charge for, even on successful runs
+			//const [payToken, message] = #fs.wiz.spellbound({ action: "prepare", owner:"tonton", cost:1 }) 
 			//	if(message) return message; 
 				// do action and confirm 
 			//	#fs.wiz.spellbound({ action: "charge", token: payToken })
-			z = "`2Your scrying has revealed the following enemies`:\n\n" + um
+			z = "`7Your scrying has revealed the following enemies`:\n\n" + um + "\n`7And their schemes`:\n\n" + pm
 			}
 		}
 		return z
